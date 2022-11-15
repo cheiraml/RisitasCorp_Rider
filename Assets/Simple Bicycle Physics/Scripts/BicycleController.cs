@@ -62,7 +62,7 @@ namespace SBPScripts
     }
     public class BicycleController : MonoBehaviour
     {
-        public float step = 0.1f;
+        public float step = 0.5f;
         public float currentRPM = 0f;
 
         public float stepTest = 20f;
@@ -491,22 +491,31 @@ namespace SBPScripts
             ApplyCustomInput();
 
             
-                if (Input.GetKeyDown(KeyCode.Z) == true)
+                if (Input.GetKeyDown(KeyCode.W) == true)
                 {
                     currentRPM = Mathf.Clamp(currentRPM + step, 0f, 40f);
 
-                    currentTest = Mathf.Clamp(currentTest + stepTest, 0, 300);
+                    currentTest = Mathf.Clamp(currentTest + stepTest, 0, 40);
 
-                    Debug.Log(  60*Mathf.InverseLerp(0, 300, currentTest));
-                    //sprint = true;
+                    Debug.Log(  30*Mathf.InverseLerp(0, 300, currentTest));
+                //sprint = true;
+                if (currentRPM >= 18)
+                {
+                    currentRPM = 17;
+                    
                 }
-                if (Input.GetKeyDown(KeyCode.C) == true)
+            }
+                if (Input.GetKeyDown(KeyCode.S) == true)
                 {
                     currentRPM = Mathf.Clamp(currentRPM - step, 0f, 40f);
 
-                    currentTest = Mathf.Clamp(currentTest - stepTest, 0, 300);
+                    currentTest = Mathf.Clamp(currentTest - stepTest, 0, 40);
+                if (currentRPM>=18) {
+                    currentRPM = 17;
+                    
+                }
 
-                     Debug.Log(60 * Mathf.InverseLerp(0, 300, currentTest));
+                     Debug.Log(30 * Mathf.InverseLerp(0, 300, currentTest));
 
 
                     if (currentRPM ==0) sprint = false;
