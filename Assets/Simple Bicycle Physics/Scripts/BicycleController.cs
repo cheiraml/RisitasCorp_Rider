@@ -163,19 +163,19 @@ namespace SBPScripts
         private Thread receiveThread;
         private UdpClient receiveClient;
 
-        /*private IPEndPoint receiveEndPoint2;
+        private IPEndPoint receiveEndPoint2;
         public int receivePort2 = 4000;
         private bool isInitialized2;
         private Queue receiveQueue2;
         private Thread receiveThread2;
-        private UdpClient receiveClient2;*/
+        private UdpClient receiveClient2;
 
 
         void Awake()
         {
             transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
             Initialize();
-            //Initialize2();
+            Initialize2();
         }
 
 
@@ -190,7 +190,7 @@ namespace SBPScripts
             isInitialized = true;
         }
 
-        /*private void Initialize2()
+        private void Initialize2()
         {
             receiveEndPoint2 = new IPEndPoint(IPAddress.Parse(ip), receivePort2);
             receiveClient2 = new UdpClient(receivePort2);
@@ -199,7 +199,7 @@ namespace SBPScripts
             receiveThread2.IsBackground = true;
             receiveThread2.Start();
             isInitialized2 = true;
-        }*/
+        }
 
         private void ReceiveDataListener()
         {
@@ -221,7 +221,7 @@ namespace SBPScripts
             }
         }
 
-        /*private void ReceiveDataListener2()
+        private void ReceiveDataListener2()
         {
             Debug.Log("entrando a dirección");
             while (true)
@@ -234,8 +234,8 @@ namespace SBPScripts
                     float direction = BitConverter.ToSingle(data, 0);
                     Debug.Log(direction);
                     receiveQueue2.Enqueue(direction);
-                    customSteerAxis = -direction;
-                    customLeanAxis = -direction;
+                    
+                    //customLeanAxis = -direction;
 
                 }
                 catch (System.Exception ex)
@@ -243,7 +243,7 @@ namespace SBPScripts
                     Debug.Log(ex.ToString());
                 }
             }
-        }*/
+        }
 
             private void OnDestroy()
         {
@@ -266,7 +266,7 @@ namespace SBPScripts
                 Debug.Log("Thread killed");
                 isInitialized = false;
             }
-           /* if (isInitialized2)
+           if (isInitialized2)
             {
                 receiveThread2.Abort();
                 receiveThread2 = null;
@@ -274,7 +274,7 @@ namespace SBPScripts
                 receiveClient2 = null;
                 Debug.Log("Thread direction killed");
                 isInitialized2 = false;
-            }*/
+            }
         }
 
 
@@ -557,21 +557,14 @@ namespace SBPScripts
                 Debug.Log("New target speed: " + currentRPM.ToString());
                 }
 
-            /* if (Input.GetKeyDown(KeyCode.X)){
-                 if (r != 0)
-                     axis = Mathf.Clamp(axis + r * s * t, -1f, 1f);
-                 else
-                     axis = Mathf.Clamp01(Mathf.Abs(axis) - g * t) * Mathf.Sign(axis);
-             }*/
-
-            /*if (receiveQueue2.Count != 0)
+            if (receiveQueue2.Count != 0)
             {
                 float value = (float)receiveQueue2.Dequeue();
                 customSteerAxis = value;
-                customLeanAxis = value;
+                //customLeanAxis = value;
                 Debug.Log("New target diretion" + value.ToString());
 
-            }*/
+            }
 
 
 
