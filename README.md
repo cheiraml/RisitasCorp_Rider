@@ -403,7 +403,7 @@ The address sensor (for simplicity) will work as a second UDP client, connected 
 **Programs to use**
 
 *Arduino IDE*
-![](https://content.arduino.cc/assets/arduino_logo_1200x630-01.png)
+![](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/ArduinoLogo.png)
 Arduino IDE will be used to program the microcontroller so that it knows that it must handle the gyroscope and transforms them to vectors; for this it is necessary to add in the card manager the M5Stack library, and the Core2 personal library. 
 
 [Manufacturer's instructions](https://docs.m5stack.com/en/arduino/arduino_development)
