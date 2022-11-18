@@ -102,7 +102,7 @@ The idea with this sensor is to measure the speed of the rider, following the fo
 
 
 
-### Simplified opera
+### Step one: Simplified opera
 ting steps
 
 1. OVERVIEW OF OPERATION
@@ -123,7 +123,7 @@ ting steps
 * Thread removal process 
 * RPM transformation to velocity
 
-***Overview of operation***
+***1 Overview of operation***
 
 **Cadence sensor**
 
@@ -155,7 +155,7 @@ This will host the application that will act as UDP Server. For this it is neces
 The UDP client that will take the RPM and act with respect to the velocity that the user takes in real time. We will use editor version 2021.3.10f1
 
 
-***Bluetooth Low Energy (BLE) protocol***
+***2 Bluetooth Low Energy (BLE) protocol***
 
 **BLE Overview**
 
@@ -275,7 +275,7 @@ To calculate the RPM we must take into account two summations; the current sum o
 
 *Please note that the BLE file presented in this document is not complete in the example codes; but you can find it in this repository inside the folder called bleUDP-main.*
 
-***Simple bicycle physics***
+***3 Simple bicycle physics***
 
 Simple bicycle physics is a *AAA* E-sport Asset built to work in new generation games. Develop High Fidelity Bicycling Games at par with some of the Triple A titles. In this case we are going to use the controller features: Power, Torque, Steer Angle, Lean Dynamics, Pedaling Dynamics, Wheel Friction, Cycling Oscillation, Bunny Hop among many others, and the Animation Rigging is used for customizable IK to fit any style of riding. Procedurally / algorithmically generated IK.
 
@@ -354,7 +354,7 @@ if (receiveQueue.Count != 0)
 
 
  
-### Simplified operating steps
+### Step two: Simplified operating steps
 
 1. OVERVIEW OF OPERATION
 * M5Stack core2 sensor
@@ -373,7 +373,7 @@ if (receiveQueue.Count != 0)
 * Transform from binary to float
 * What to comment
 
-***Overview of operation***
+***1 Overview of operation***
 
 **M5Stack CORE2 sensor**
 
@@ -421,7 +421,7 @@ The UDP client that will take the vector and change this with respect to the dir
 
 
 
-***Arduino IDE protocol***
+***2 Arduino IDE protocol***
 
 **mobile covered area data**
 
@@ -525,9 +525,12 @@ if ( (currentTime - printIMUTime ) > 100) {
 }
  ```
 
- Each 100 ms the display is changing the direction with respect to the movement going through the gyroscope; and each second ends by evaluating the above positions to find a change and is transformed creating a vector of 3 variables. 
+ Each 100 ms the display is changing the direction with respect to the movement going through the gyroscope; and each second ends by evaluating the above positions to find a change and is transformed creating a vector of 3 variables.
+  ***3 ScriptComunicator***
 
-***Simple Bicycle physics***
+with the scriptcommunicator, we can verify that the sensor data is being received and that it reaches the computer.
+
+***4 Simple Bicycle physics***
 
 **Vector transformation to direction**
 
@@ -544,11 +547,7 @@ if (receiveQueue2.Count != 0)
 ```
 
 *Remember that the implementation code is not fully written in this example code, this is only a readme; To fully view the functionality download a version from the repository*
- ***ScriptComunicator***
 
-with the scriptcommunicator, we can verify that the sensor data is being received and that it reaches the computer.
-
-***Simple Bicycle physics***
 
 **Required variables**
 
@@ -652,7 +651,7 @@ if (receiveQueue2.Count != 0)
 
 
 
-## Additional applications 
+## Step three: Additional applications 
 
 Finally, application services, which run different orders of experience and are responsible for detonating different events in the main application. 
 
@@ -667,7 +666,7 @@ These applications run on android devices connected to the same local Wifi netwo
 * Sending data
 * Verify connections
 
-***Explanation of the functionalities***
+***1 Explanation of the functionalities***
 
 ![](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/Segmento3.png)
 
@@ -801,7 +800,7 @@ public void ButtonAccion()
     }
 ```
 
-***Protocol of activities***
+***2 Protocol of activities***
 
 **Sending data**
 
