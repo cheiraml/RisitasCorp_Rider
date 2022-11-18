@@ -3,6 +3,7 @@
 
 This document will contain the step by step with the necessary processes to carry out this project; which will include in detail what parts are required, What tools, versions, how to program computer systems, and review their states.
 # Concept
+![image](https://user-images.githubusercontent.com/44727218/202744501-3753ba40-e655-47bb-8bfe-0b6ed34fcff9.png)
 
 Our project was based on the idea of ​​getting to the u by bicycle, in the longest possible time, "it's a world upside down", where the later you arrive the better, so our runner will have to arrive late to the u and your saboteur will create different actions that will make him move faster and faster.
 
