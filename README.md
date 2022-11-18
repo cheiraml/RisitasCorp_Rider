@@ -825,7 +825,19 @@ https://user-images.githubusercontent.com/44727218/202724318-024c4dca-e8d9-4170-
 https://user-images.githubusercontent.com/44727218/202724792-61cc56b9-2a3d-4ba2-aa58-2aae03b457ee.mp4
 
 
+
+
+
+
 [Risitas Corp. APP Repository](https://github.com/IsabelaGAngel/RisitasCorp_App)
+
+
+
+https://user-images.githubusercontent.com/44727218/202745653-cbffbd2b-42ce-4808-8387-863de9669a2d.mov
+
+
+
+https://user-images.githubusercontent.com/44727218/202745735-9b77c1fa-7aa5-4abf-8db1-d656b7ad918e.mp4
 
 
 
