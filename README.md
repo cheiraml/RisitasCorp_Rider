@@ -14,6 +14,56 @@ In general, our experience is made for all kinds of people, causing them to be f
 ![3](https://user-images.githubusercontent.com/44727218/202735823-1f1a84ec-ba09-4359-b481-4b315efb53dd.PNG)
 # The experience (step by step)
 
+STEP ONE: CADENCE SENSOR
+
+1. OVERVIEW OF OPERATION
+* Cadence sensor
+* UDP Client Architecture Segment
+* Programs to use
+
+
+2. BLUETOOTH LOW ENERGY PROTOCOL
+* BLE Overview 
+* Code initialization 
+* State Machine 
+* Calculating RPM
+
+3. SIMPLE BICYCLE PHYSICS
+* Connecting to the serial port 
+* Code initialization 
+* Thread removal process 
+* RPM transformation to velocity
+
+
+STEP TWO: DIRECTION SENSOR
+1. OVERVIEW OF OPERATION
+* M5Stack core2 sensor
+* UDP Client Architecture Segment
+* Programs to use
+
+2. SCRIPT COMUNICATOR
+
+3. ARDUINO IDE PROTOCOL
+* Code initialization 
+* Draw map
+* Calculating direction
+
+4. SIMPLE BICYCLE PHYSICS
+* Vector transformation to direction
+* Transform from binary to float
+* What to comment
+
+STEP THREE: OTHER FUNCTION
+
+1. EXPLANATION OF THE FUNCTIONALITIES
+* Master application
+* Saboteur application
+
+2. PROTOCOL OF ACTIVITIES
+* Sending data
+* Verify connections
+
+
 ## Cadence Sensor
 
 A cadence sensor is a device capable of measuring the revolutions per minute (RPM) of the connecting rod or pedals of the bicycle.
@@ -273,219 +323,8 @@ if (receiveQueue.Count != 0)
     }
 ```
 
-***Arduino IDE protocol***
 
-**Code initialization**
-
-*Instances*
-
-```c++
-#define M5STACK_MPU6886
-#include <M5Core2.h>
-#include "password.h"
-```
-
-To start with the process we need to resort to the M5Core2 libraries; in addition to that we will save a file with the network name and password.
-
-*Initialization*
-
-```c++
-WiFiUDP udpDevice;
-uint16_t localUdpPort = 3302; // Sensor listening port
-uint16_t UDPPort = 4000; // Port to which the sensor sends data
-                         
-const char *unityIP = "192.168.0.6"; //IP address of the equipment to which it must connect
-
-float accX = 0.0F;  
-float accY = 0.0F;  
-float accZ = 0.0F;
-
-float offsetArr[3] = {0.0F};
-```
-In the initialization we can see that what the gyroscope will do is to transform its data by a vector of 3 directions, which will result in the angle of movement of the handlebar every x amount of time.
-
-**mobile covered area data**
-
-```c++
-
-#ifndef _PASSWORD_H_
-#define _PASSWORD_H_
-
-const char* ssid = "Cheira";
-const char* password = "holissss";
-
-#endif
-```
-Are the user data and password, and when the sensor is connected you can see the pointer working.
-
-
-**Draw map**
-
-```c++
-void drawGrid() {
-  M5.Lcd.drawLine(41, 120, 279, 120, CYAN);
-  M5.Lcd.drawLine(160, 1, 160, 239, CYAN);
-  M5.Lcd.drawCircle(160, 120, 119, CYAN);
-  M5.Lcd.drawCircle(160, 120, 60, CYAN);
-}
-
-void drawSpot(int ax, int ay) {
-  static int prevx = 0;
-  static int prevy = 0;
-  int x, y;
-  x = map(constrain(ax, -300, 300), -300, 300, 40, 280);
-  y = map(constrain(ay, -300, 300), -300, 300, 240, 0);
-
-  M5.Lcd.fillCircle(prevx, prevy, 7, BLACK);
-  drawGrid();
-  M5.Lcd.fillCircle(x, y, 7, WHITE);
-  prevx = x;
-  prevy = y;
-
-}
-```
-The map is a short explanation that gives us feedback on the current process of reading the movement and the direction it is taking.
-
-**Calculating direction**
-
-```c++
-if ( (currentTime - imuReadTime) > 100) {
-    imuReadTime = currentTime;
-    M5.IMU.getAccelData(&accX, &accY, &accZ);
-    drawSpot((int)((accX - offsetArr[0]) * 1000), (int)((accY - offsetArr[1]) * 1000));
-}
-
-  currentTime = millis();
-if ( (currentTime - printIMUTime ) > 100) {
-    printIMUTime = currentTime;
-    M5.IMU.getAccelData(&accX, &accY, &accZ);
-    int x, y;
-    x = (int)((accX - offsetArr[0]) * 1000);
-    y = (int)((accY - offsetArr[1]) * 1000);
-    printf("accX: %d, accY: %d\n", x, y);
-    printf("Vbat:%f/Cbat:%f\n", M5.Axp.GetBatVoltage(), M5.Axp.GetBatCurrent());
-    if (y >= 150) {
-      auto m = (accX - offsetArr[0]) / (accY - offsetArr[1]);
-      printf("m: %f\n", m);
-      M5.Lcd.setCursor(0, 20);
-      M5.Lcd.printf("m: %f", m);
-
-
-      udpDevice.beginPacket(unityIP, UDPPort);
-      udpDevice.write((uint8_t *)&m, 4);
-      udpDevice .endPacket();
-    }
-}
- ```
-
- Each 100 ms the display is changing the direction with respect to the movement going through the gyroscope; and each second ends by evaluating the above positions to find a change and is transformed creating a vector of 3 variables. 
-
- ***ScriptComunicator***
-
-with the scriptcommunicator, we can verify that the sensor data is being received and that it reaches the computer.
-
-***Simple Bicycle physics***
-
-**Required variables**
-
-```c#
- private IPEndPoint receiveEndPoint2;
-        public int receivePort2 = 4000;
-        private bool isInitialized2;
-        private Queue receiveQueue2;
-        private Thread receiveThread2;
-        private UdpClient receiveClient2;
-
-```
-**ReceiveDataListener2**
-
-
-
-```c#
-private void ReceiveDataListener2()
-        {
-            Debug.Log("entrando a dirección");
-            while (true)
-            {
-                try
-                {
-                    byte[] data = receiveClient2.Receive(ref receiveEndPoint2);
-                    Debug.Log("entrando a receive");
-                    //UInt16 rpm = BitConverter.ToUInt16(data, data.Length - 2);
-                    float direction = BitConverter.ToSingle(data, 0);
-                    Debug.Log(direction);
-                    receiveQueue2.Enqueue(direction);
-                    customSteerAxis = -direction;
-                    customLeanAxis = -direction;
-
-                }
-                catch (System.Exception ex)
-                {
-                    Debug.Log(ex.ToString());
-                }
-            }
-        }
-```
-This code is very important, because it changes the data that is heard in the computer in binary, it changes it for data in floats, it is also assigned acustomSteerAxis and customLeanAxis, which are the ones that produce the rotation in the handlebars of the bicycle.
-
-**Comment**
-
-```c#
-
- void ApplyCustomInput()
-        {
-            if (wayPointSystem.recordingState == WayPointSystem.RecordingState.DoNothing || wayPointSystem.recordingState == WayPointSystem.RecordingState.Record)
-            {
-                //CustomInput("Horizontal", ref customSteerAxis, 5, 5, false);
-                CustomInput("Vertical", ref customAccelerationAxis, 1, 1, false);
-                //CustomInput("Horizontal", ref customLeanAxis, 1, 1, false);
-                CustomInput("Vertical", ref rawCustomAccelerationAxis, 1, 1, true);
-
-                Debug.Log("CustomLeamAxis" + customLeanAxis);
-                Debug.Log("CustomSteerAxis" + customSteerAxis);
-
-                //sprint = Input.GetKey(KeyCode.LeftShift);
-
-                //Stateful Input - bunny hopping
-                if (Input.GetKey(KeyCode.Space))
-                    bunnyHopInputState = 1;
-                else if (Input.GetKeyUp(KeyCode.Space))
-                    bunnyHopInputState = -1;
-                else
-                    bunnyHopInputState = 0;
-
-                //Record
-                if (wayPointSystem.recordingState == WayPointSystem.RecordingState.Record)
-                {
-                    if (Time.frameCount % wayPointSystem.frameIncrement == 0)
-                    {
-                        wayPointSystem.bicyclePositionTransform.Add(new Vector3(Mathf.Round(transform.position.x * 100f) * 0.01f, Mathf.Round(transform.position.y * 100f) * 0.01f, Mathf.Round(transform.position.z * 100f) * 0.01f));
-                        wayPointSystem.bicycleRotationTransform.Add(transform.rotation);
-                        wayPointSystem.movementInstructionSet.Add(new Vector2Int((int)Input.GetAxisRaw("Horizontal"), (int)Input.GetAxisRaw("Vertical")));
-                        wayPointSystem.sprintInstructionSet.Add(sprint);
-                        wayPointSystem.bHopInstructionSet.Add(bunnyHopInputState);
-                    }
-                }
-            }
-        }
-```
-It is important to comment the customimput horizontally, because otherwise we would have contradictions in the code.
-
-**Vector transformation to direction**
-
-To take the value of the direction, the vector 3 data is placed in a queue and is received in the unity application; so we assign the value to the customSteerAxis that redirects the character in the experience. 
-
-```c#
-if (receiveQueue2.Count != 0)
-    {
-        float value = (float)receiveQueue2.Dequeue();
-        customSteerAxis = value;
-        //customLeanAxis = value;
-        Debug.Log("New target diretion" + value.ToString());
-    }
-```
-
-
+ 
 ### Simplified operating steps
 
 1. OVERVIEW OF OPERATION
@@ -493,13 +332,17 @@ if (receiveQueue2.Count != 0)
 * UDP Client Architecture Segment
 * Programs to use
 
-2. ARDUINO IDE PROTOCOL
+2. SCRIPT COMUNICATOR
+
+3. ARDUINO IDE PROTOCOL
 * Code initialization 
 * Draw map
 * Calculating direction
 
-3. SIMPLE BICYCLE PHYSICS
+4. SIMPLE BICYCLE PHYSICS
 * Vector transformation to direction
+* Transform from binary to float
+* What to comment
 
 ***Overview of operation***
 
@@ -539,6 +382,20 @@ The UDP client that will take the vector and change this with respect to the dir
 
 
 ***Arduino IDE protocol***
+
+**mobile covered area data**
+
+```c++
+
+#ifndef _PASSWORD_H_
+#define _PASSWORD_H_
+
+const char* ssid = "Cheira";
+const char* password = "holissss";
+
+#endif
+```
+Are the user data and password, and when the sensor is connected you can see the pointer working.
 
 **Code initialization**
 
@@ -647,6 +504,113 @@ if (receiveQueue2.Count != 0)
 ```
 
 *Remember that the implementation code is not fully written in this example code, this is only a readme; To fully view the functionality download a version from the repository*
+ ***ScriptComunicator***
+
+with the scriptcommunicator, we can verify that the sensor data is being received and that it reaches the computer.
+
+***Simple Bicycle physics***
+
+**Required variables**
+
+```c#
+ private IPEndPoint receiveEndPoint2;
+        public int receivePort2 = 4000;
+        private bool isInitialized2;
+        private Queue receiveQueue2;
+        private Thread receiveThread2;
+        private UdpClient receiveClient2;
+
+```
+**ReceiveDataListener2**
+
+
+
+```c#
+private void ReceiveDataListener2()
+        {
+            Debug.Log("entrando a dirección");
+            while (true)
+            {
+                try
+                {
+                    byte[] data = receiveClient2.Receive(ref receiveEndPoint2);
+                    Debug.Log("entrando a receive");
+                    //UInt16 rpm = BitConverter.ToUInt16(data, data.Length - 2);
+                    float direction = BitConverter.ToSingle(data, 0);
+                    Debug.Log(direction);
+                    receiveQueue2.Enqueue(direction);
+                    customSteerAxis = -direction;
+                    customLeanAxis = -direction;
+
+                }
+                catch (System.Exception ex)
+                {
+                    Debug.Log(ex.ToString());
+                }
+            }
+        }
+```
+This code is very important, because it changes the data that is heard in the computer in binary, it changes it for data in floats, it is also assigned acustomSteerAxis and customLeanAxis, which are the ones that produce the rotation in the handlebars of the bicycle.
+
+**Comment**
+
+```c#
+
+ void ApplyCustomInput()
+        {
+            if (wayPointSystem.recordingState == WayPointSystem.RecordingState.DoNothing || wayPointSystem.recordingState == WayPointSystem.RecordingState.Record)
+            {
+                //CustomInput("Horizontal", ref customSteerAxis, 5, 5, false);
+                CustomInput("Vertical", ref customAccelerationAxis, 1, 1, false);
+                //CustomInput("Horizontal", ref customLeanAxis, 1, 1, false);
+                CustomInput("Vertical", ref rawCustomAccelerationAxis, 1, 1, true);
+
+                Debug.Log("CustomLeamAxis" + customLeanAxis);
+                Debug.Log("CustomSteerAxis" + customSteerAxis);
+
+                //sprint = Input.GetKey(KeyCode.LeftShift);
+
+                //Stateful Input - bunny hopping
+                if (Input.GetKey(KeyCode.Space))
+                    bunnyHopInputState = 1;
+                else if (Input.GetKeyUp(KeyCode.Space))
+                    bunnyHopInputState = -1;
+                else
+                    bunnyHopInputState = 0;
+
+                //Record
+                if (wayPointSystem.recordingState == WayPointSystem.RecordingState.Record)
+                {
+                    if (Time.frameCount % wayPointSystem.frameIncrement == 0)
+                    {
+                        wayPointSystem.bicyclePositionTransform.Add(new Vector3(Mathf.Round(transform.position.x * 100f) * 0.01f, Mathf.Round(transform.position.y * 100f) * 0.01f, Mathf.Round(transform.position.z * 100f) * 0.01f));
+                        wayPointSystem.bicycleRotationTransform.Add(transform.rotation);
+                        wayPointSystem.movementInstructionSet.Add(new Vector2Int((int)Input.GetAxisRaw("Horizontal"), (int)Input.GetAxisRaw("Vertical")));
+                        wayPointSystem.sprintInstructionSet.Add(sprint);
+                        wayPointSystem.bHopInstructionSet.Add(bunnyHopInputState);
+                    }
+                }
+            }
+        }
+```
+It is important to comment the customimput horizontally, because otherwise we would have contradictions in the code.
+
+**Vector transformation to direction**
+
+To take the value of the direction, the vector 3 data is placed in a queue and is received in the unity application; so we assign the value to the customSteerAxis that redirects the character in the experience. 
+
+```c#
+if (receiveQueue2.Count != 0)
+    {
+        float value = (float)receiveQueue2.Dequeue();
+        customSteerAxis = value;
+        //customLeanAxis = value;
+        Debug.Log("New target diretion" + value.ToString());
+    }
+```
+
+
+
 
 ## Additional applications 
 
