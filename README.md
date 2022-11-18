@@ -713,7 +713,7 @@ To verify the connections between the applications we will use the scriptCommuni
 
 ##Evidence
 
-![] (https://user-images.githubusercontent.com/44727218/202724318-024c4dca-e8d9-4170-8ce6-546afc3e0398.mp4)
+https://user-images.githubusercontent.com/44727218/202724318-024c4dca-e8d9-4170-8ce6-546afc3e0398.mp4
 
 
 
