@@ -3,7 +3,7 @@
 
 This document will contain the step by step with the necessary processes to carry out this project; which will include in detail what parts are required, What tools, versions, how to program computer systems, and review their states.
 
-#The experience
+# The experience
 
 ## Cadence Sensor
 
