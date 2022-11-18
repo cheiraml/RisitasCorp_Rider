@@ -9,6 +9,7 @@ Our project was based on the idea of ​​getting to the u by bicycle, in the l
 There will always be a master, someone who tells the actions that the saboteur must do, to obtain these benefits.
 
 In general, our experience is made for all kinds of people, causing them to be forced to exercise and move.
+![1](https://user-images.githubusercontent.com/44727218/202735594-0d9bc2dc-8088-44f7-8642-5f8af55377ff.PNG)
 
 
 # The experience
@@ -19,13 +20,19 @@ A cadence sensor is a device capable of measuring the revolutions per minute (RP
 
 The idea with this sensor is to measure the speed of the rider, following the formula of the cutting speed that tells us that Velocity is equivalent to Phi(π) per Diameter per RPM, divided by 1000.
 
+![2](https://user-images.githubusercontent.com/44727218/202735710-378cdb49-efe7-443e-97c3-79970cf4a435.PNG)
+![1](https://user-images.githubusercontent.com/44727218/202735762-183488b8-f6c0-4ab0-bf1f-8a4e4e3b768b.PNG)
+![3](https://user-images.githubusercontent.com/44727218/202735823-1f1a84ec-ba09-4359-b481-4b315efb53dd.PNG)
 
-### Simplified operating steps
+
+### Simplified opera
+ting steps
 
 1. OVERVIEW OF OPERATION
 * Cadence sensor
 * UDP Client Architecture Segment
 * Programs to use
+
 
 2. BLUETOOTH LOW ENERGY PROTOCOL
 * BLE Overview 
