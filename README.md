@@ -30,7 +30,7 @@ comprising the creation process and user experience.
 
 **Tech** 
 
-***Research***
+***Research
 
 The idea of the project was to create a race against the clock of a cyclist; which will be constantly sabotaged by his friends and by the altered physics of the game itself.
 
