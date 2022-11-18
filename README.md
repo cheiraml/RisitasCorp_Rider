@@ -73,6 +73,10 @@ In general, our experience is made for all kinds of people, causing them to be f
 
 ## UX Design
 
+**Design**
+![1](https://user-images.githubusercontent.com/44727218/202762134-134e4771-13da-4217-8301-05b0e96a53ad.PNG)'
+
+
 
 ## UI Design
 ![image](https://user-images.githubusercontent.com/44727218/202745226-36607916-c142-403f-a36d-057468e3406d.png)
