@@ -13,6 +13,8 @@ This document will contain the step by step with the necessary processes to carr
 ![image](https://user-images.githubusercontent.com/44727218/202744916-8aafe725-26f3-4acc-99e0-237ea8d875a3.png)
 ![image](https://user-images.githubusercontent.com/44727218/202744937-9a3d097a-7417-4b8c-abd2-cdd30a0abf91.png)
 ![image](https://user-images.githubusercontent.com/44727218/202744978-7ae7e200-18eb-4f9a-83e9-3629ad8a29e4.png)
+
+## Design
 ![image](https://user-images.githubusercontent.com/44727218/202745023-9da21f85-ce33-45ea-9ef9-427587803298.png)
 ![image](https://user-images.githubusercontent.com/44727218/202745061-5d6343f6-659a-4a1f-b66b-d8691be0fbea.png)
 ![image](https://user-images.githubusercontent.com/44727218/202745084-51d2ed91-d290-4b40-91de-e6d72ff19096.png)
