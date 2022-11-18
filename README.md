@@ -14,13 +14,15 @@ This document will contain the step by step with the necessary processes to carr
 ![image](https://user-images.githubusercontent.com/44727218/202744937-9a3d097a-7417-4b8c-abd2-cdd30a0abf91.png)
 ![image](https://user-images.githubusercontent.com/44727218/202744978-7ae7e200-18eb-4f9a-83e9-3629ad8a29e4.png)
 
-## Design
+## UX Design
 ![image](https://user-images.githubusercontent.com/44727218/202745023-9da21f85-ce33-45ea-9ef9-427587803298.png)
 ![image](https://user-images.githubusercontent.com/44727218/202745061-5d6343f6-659a-4a1f-b66b-d8691be0fbea.png)
 ![image](https://user-images.githubusercontent.com/44727218/202745084-51d2ed91-d290-4b40-91de-e6d72ff19096.png)
 ![image](https://user-images.githubusercontent.com/44727218/202745126-2b403124-39fa-448e-9106-058eeb23dff6.png)
 ![image](https://user-images.githubusercontent.com/44727218/202745165-bc0cb65c-32be-4daf-95a7-455c7d08f98b.png)
 ![image](https://user-images.githubusercontent.com/44727218/202745193-3e6d09a7-f608-4561-8829-b30938c3354b.png)
+
+## UI Design
 ![image](https://user-images.githubusercontent.com/44727218/202745226-36607916-c142-403f-a36d-057468e3406d.png)
 ![image](https://user-images.githubusercontent.com/44727218/202745257-ebdc3f18-dcd6-4f6e-afbe-196732f8418b.png)
 ![image](https://user-images.githubusercontent.com/44727218/202745291-172c1c66-6dbc-4731-ad3c-edc1ce3779fe.png)
