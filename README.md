@@ -4,6 +4,28 @@
 This document will contain the step by step with the necessary processes to carry out this project; which will include in detail what parts are required, What tools, versions, how to program computer systems, and review their states.
 # Concept
 ![image](https://user-images.githubusercontent.com/44727218/202744501-3753ba40-e655-47bb-8bfe-0b6ed34fcff9.png)
+![image](https://user-images.githubusercontent.com/44727218/202744631-47496e9d-81b5-4379-a6cd-28b96aa27bed.png)
+![image](https://user-images.githubusercontent.com/44727218/202744665-33503ec6-0c84-492a-a953-2b9b59d09a2d.png)
+![image](https://user-images.githubusercontent.com/44727218/202744730-be48b3cd-8f41-4cd6-b375-4cc7b06ee7d7.png)
+![image](https://user-images.githubusercontent.com/44727218/202744755-e740c3ea-7c64-4558-acba-b2d7af9c0d3d.png)
+![image](https://user-images.githubusercontent.com/44727218/202744823-9be4b447-5dca-4b28-bab8-2676e6cc0e4f.png)
+![image](https://user-images.githubusercontent.com/44727218/202744856-f51187c0-5516-4175-9884-202ecf553bc0.png)
+![image](https://user-images.githubusercontent.com/44727218/202744916-8aafe725-26f3-4acc-99e0-237ea8d875a3.png)
+![image](https://user-images.githubusercontent.com/44727218/202744937-9a3d097a-7417-4b8c-abd2-cdd30a0abf91.png)
+![image](https://user-images.githubusercontent.com/44727218/202744978-7ae7e200-18eb-4f9a-83e9-3629ad8a29e4.png)
+![image](https://user-images.githubusercontent.com/44727218/202745023-9da21f85-ce33-45ea-9ef9-427587803298.png)
+![image](https://user-images.githubusercontent.com/44727218/202745061-5d6343f6-659a-4a1f-b66b-d8691be0fbea.png)
+![image](https://user-images.githubusercontent.com/44727218/202745084-51d2ed91-d290-4b40-91de-e6d72ff19096.png)
+![image](https://user-images.githubusercontent.com/44727218/202745126-2b403124-39fa-448e-9106-058eeb23dff6.png)
+![image](https://user-images.githubusercontent.com/44727218/202745165-bc0cb65c-32be-4daf-95a7-455c7d08f98b.png)
+![image](https://user-images.githubusercontent.com/44727218/202745193-3e6d09a7-f608-4561-8829-b30938c3354b.png)
+![image](https://user-images.githubusercontent.com/44727218/202745226-36607916-c142-403f-a36d-057468e3406d.png)
+![image](https://user-images.githubusercontent.com/44727218/202745257-ebdc3f18-dcd6-4f6e-afbe-196732f8418b.png)
+![image](https://user-images.githubusercontent.com/44727218/202745291-172c1c66-6dbc-4731-ad3c-edc1ce3779fe.png)
+![image](https://user-images.githubusercontent.com/44727218/202745310-50ac4abb-e3dd-4879-bc4d-71b2a78756e5.png)
+![image](https://user-images.githubusercontent.com/44727218/202745328-f1622cd5-3e57-45fc-9cc0-2ba666e6a442.png)
+![image](https://user-images.githubusercontent.com/44727218/202745350-63059e8d-26b2-4f50-a540-626bed15fc9f.png)
+
 
 Our project was based on the idea of ​​getting to the u by bicycle, in the longest possible time, "it's a world upside down", where the later you arrive the better, so our runner will have to arrive late to the u and your saboteur will create different actions that will make him move faster and faster.
 
