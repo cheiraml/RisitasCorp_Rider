@@ -405,7 +405,13 @@ Arduino IDE will be used to program the microcontroller so that it knows that it
 [Boards manager](https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/arduino/package_m5stack_index.json)
 
 *ScriptComunicator*
+
+
+
+
 ![](https://user-images.githubusercontent.com/44727218/202751214-e4552ba1-b01a-4c7b-8711-4ec5656b9982.png)
+
+
 Version 05.18.
 
 *Unity*![Sin título]
