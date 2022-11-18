@@ -393,6 +393,7 @@ The address sensor (for simplicity) will work as a second UDP client, connected 
 
 *Arduino IDE*
 
+we use version 1.8.19 of Arduino.
 ![](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/ArduinoLogo.png)
 
 Arduino IDE will be used to program the microcontroller so that it knows that it must handle the gyroscope and transforms them to vectors; for this it is necessary to add in the card manager the M5Stack library, and the Core2 personal library. 
@@ -404,7 +405,7 @@ Arduino IDE will be used to program the microcontroller so that it knows that it
 [Boards manager](https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/arduino/package_m5stack_index.json)
 
 *Unity*
-
+we use version 2021.3.10f1 of Unity
 ![](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/Unitylogo.png)
 The UDP client that will take the vector and change this with respect to the direction that the user takes in real time. We will use editor version 2021.3.10f1
 
