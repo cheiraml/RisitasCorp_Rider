@@ -14,6 +14,15 @@ This document will contain the step by step with the necessary processes to carr
 ![image](https://user-images.githubusercontent.com/44727218/202744937-9a3d097a-7417-4b8c-abd2-cdd30a0abf91.png)
 ![image](https://user-images.githubusercontent.com/44727218/202744978-7ae7e200-18eb-4f9a-83e9-3629ad8a29e4.png)
 
+Our project was based on the idea of ​​getting to the u by bicycle, in the longest possible time, "it's a world upside down", where the later you arrive the better, so our runner will have to arrive late to the u and your saboteur will create different actions that will make him move faster and faster.
+
+There will always be a master, someone who tells the actions that the saboteur must do, to obtain these benefits.
+
+In general, our experience is made for all kinds of people, causing them to be forced to exercise and move.
+![1](https://user-images.githubusercontent.com/44727218/202735594-0d9bc2dc-8088-44f7-8642-5f8af55377ff.PNG)
+![2](https://user-images.githubusercontent.com/44727218/202735710-378cdb49-efe7-443e-97c3-79970cf4a435.PNG)
+![3](https://user-images.githubusercontent.com/44727218/202735823-1f1a84ec-ba09-4359-b481-4b315efb53dd.PNG)
+
 ## UX Design
 ![image](https://user-images.githubusercontent.com/44727218/202745023-9da21f85-ce33-45ea-9ef9-427587803298.png)
 ![image](https://user-images.githubusercontent.com/44727218/202745061-5d6343f6-659a-4a1f-b66b-d8691be0fbea.png)
@@ -31,14 +40,7 @@ This document will contain the step by step with the necessary processes to carr
 ![image](https://user-images.githubusercontent.com/44727218/202745350-63059e8d-26b2-4f50-a540-626bed15fc9f.png)
 
 
-Our project was based on the idea of ​​getting to the u by bicycle, in the longest possible time, "it's a world upside down", where the later you arrive the better, so our runner will have to arrive late to the u and your saboteur will create different actions that will make him move faster and faster.
 
-There will always be a master, someone who tells the actions that the saboteur must do, to obtain these benefits.
-
-In general, our experience is made for all kinds of people, causing them to be forced to exercise and move.
-![1](https://user-images.githubusercontent.com/44727218/202735594-0d9bc2dc-8088-44f7-8642-5f8af55377ff.PNG)
-![2](https://user-images.githubusercontent.com/44727218/202735710-378cdb49-efe7-443e-97c3-79970cf4a435.PNG)
-![3](https://user-images.githubusercontent.com/44727218/202735823-1f1a84ec-ba09-4359-b481-4b315efb53dd.PNG)
 # The experience (step by step)
 
 STEP ONE: CADENCE SENSOR
