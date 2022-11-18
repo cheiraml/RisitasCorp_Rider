@@ -26,6 +26,7 @@ There will always be a master, someone who tells the actions that the saboteur m
 **The design**
 
 comprising the creation process and user experience.
+
 **Tech** 
 
 ***Research***
@@ -62,7 +63,11 @@ multiplayer platform to allow more students on healthy competition furthering th
 
 ![1](https://user-images.githubusercontent.com/44727218/202761635-bd45c648-e117-4a87-a68e-7edccafb0b6f.PNG)
 
+**Lo-fi Wireframes**
 
+We were planning give to our users a free responsabilities moment, a safe space where they can distract themself and
+share with others.
+![1](https://user-images.githubusercontent.com/44727218/202762440-230a4798-60ec-496e-925c-4126d3d4141c.PNG)
 
 
 
