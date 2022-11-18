@@ -2,6 +2,10 @@
 ![Logo](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/RisitasLogo.png)
 
 This document will contain the step by step with the necessary processes to carry out this project; which will include in detail what parts are required, What tools, versions, how to program computer systems, and review their states.
+
+At the very beginning we just had a dream and a bicycle. This project started as an alternative for the course Interactive physical Systems II. So, we all as a team looked for making all this consciously thinking in everyones strengths.  Having this on mind, we decided to create a Development Team, an User Experience Team, and a Design Team. 
+All guided by the professor Juan Franco who are we really grateful. This is Risitas Corp.
+
 # Concept
 
 We're a multinational conglomerate of companies working on responsible for energy, logistics, social, and scientific investigation. Our world is so different than yours, we have created a new virtual reality proyect who is seeking help you with the stress gerenerated by university exams.
