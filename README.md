@@ -2,6 +2,14 @@
 ![Logo](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/RisitasLogo.png)
 
 This document will contain the step by step with the necessary processes to carry out this project; which will include in detail what parts are required, What tools, versions, how to program computer systems, and review their states.
+# Concept
+
+Our project was based on the idea of ​​getting to the u by bicycle, in the longest possible time, "it's a world upside down", where the later you arrive the better, so our runner will have to arrive late to the u and your saboteur will create different actions that will make him move faster and faster.
+
+There will always be a master, someone who tells the actions that the saboteur must do, to obtain these benefits.
+
+In general, our experience is made for all kinds of people, causing them to be forced to exercise and move.
+
 
 # The experience
 
@@ -291,6 +299,21 @@ float offsetArr[3] = {0.0F};
 ```
 In the initialization we can see that what the gyroscope will do is to transform its data by a vector of 3 directions, which will result in the angle of movement of the handlebar every x amount of time.
 
+**mobile covered area data**
+
+```c++
+
+#ifndef _PASSWORD_H_
+#define _PASSWORD_H_
+
+const char* ssid = "Cheira";
+const char* password = "holissss";
+
+#endif
+```
+Are the user data and password, and when the sensor is connected you can see the pointer working.
+
+
 **Draw map**
 
 ```c++
@@ -352,7 +375,96 @@ if ( (currentTime - printIMUTime ) > 100) {
 
  Each 100 ms the display is changing the direction with respect to the movement going through the gyroscope; and each second ends by evaluating the above positions to find a change and is transformed creating a vector of 3 variables. 
 
+ ***ScriptComunicator***
+
+with the scriptcommunicator, we can verify that the sensor data is being received and that it reaches the computer.
+
 ***Simple Bicycle physics***
+
+**Required variables**
+
+```c#
+ private IPEndPoint receiveEndPoint2;
+        public int receivePort2 = 4000;
+        private bool isInitialized2;
+        private Queue receiveQueue2;
+        private Thread receiveThread2;
+        private UdpClient receiveClient2;
+
+```
+**ReceiveDataListener2**
+
+
+
+```c#
+private void ReceiveDataListener2()
+        {
+            Debug.Log("entrando a dirección");
+            while (true)
+            {
+                try
+                {
+                    byte[] data = receiveClient2.Receive(ref receiveEndPoint2);
+                    Debug.Log("entrando a receive");
+                    //UInt16 rpm = BitConverter.ToUInt16(data, data.Length - 2);
+                    float direction = BitConverter.ToSingle(data, 0);
+                    Debug.Log(direction);
+                    receiveQueue2.Enqueue(direction);
+                    customSteerAxis = -direction;
+                    customLeanAxis = -direction;
+
+                }
+                catch (System.Exception ex)
+                {
+                    Debug.Log(ex.ToString());
+                }
+            }
+        }
+```
+This code is very important, because it changes the data that is heard in the computer in binary, it changes it for data in floats, it is also assigned acustomSteerAxis and customLeanAxis, which are the ones that produce the rotation in the handlebars of the bicycle.
+
+**Comment**
+
+```c#
+
+ void ApplyCustomInput()
+        {
+            if (wayPointSystem.recordingState == WayPointSystem.RecordingState.DoNothing || wayPointSystem.recordingState == WayPointSystem.RecordingState.Record)
+            {
+                //CustomInput("Horizontal", ref customSteerAxis, 5, 5, false);
+                CustomInput("Vertical", ref customAccelerationAxis, 1, 1, false);
+                //CustomInput("Horizontal", ref customLeanAxis, 1, 1, false);
+                CustomInput("Vertical", ref rawCustomAccelerationAxis, 1, 1, true);
+
+                Debug.Log("CustomLeamAxis" + customLeanAxis);
+                Debug.Log("CustomSteerAxis" + customSteerAxis);
+
+                //sprint = Input.GetKey(KeyCode.LeftShift);
+
+                //Stateful Input - bunny hopping
+                if (Input.GetKey(KeyCode.Space))
+                    bunnyHopInputState = 1;
+                else if (Input.GetKeyUp(KeyCode.Space))
+                    bunnyHopInputState = -1;
+                else
+                    bunnyHopInputState = 0;
+
+                //Record
+                if (wayPointSystem.recordingState == WayPointSystem.RecordingState.Record)
+                {
+                    if (Time.frameCount % wayPointSystem.frameIncrement == 0)
+                    {
+                        wayPointSystem.bicyclePositionTransform.Add(new Vector3(Mathf.Round(transform.position.x * 100f) * 0.01f, Mathf.Round(transform.position.y * 100f) * 0.01f, Mathf.Round(transform.position.z * 100f) * 0.01f));
+                        wayPointSystem.bicycleRotationTransform.Add(transform.rotation);
+                        wayPointSystem.movementInstructionSet.Add(new Vector2Int((int)Input.GetAxisRaw("Horizontal"), (int)Input.GetAxisRaw("Vertical")));
+                        wayPointSystem.sprintInstructionSet.Add(sprint);
+                        wayPointSystem.bHopInstructionSet.Add(bunnyHopInputState);
+                    }
+                }
+            }
+        }
+```
+It is important to comment the customimput horizontally, because otherwise we would have contradictions in the code.
 
 **Vector transformation to direction**
 
