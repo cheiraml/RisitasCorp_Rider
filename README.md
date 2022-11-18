@@ -169,7 +169,31 @@ Everything above this is a lie. (We just wanted a nice palette to show off).
 
 ***High contrast***
 
+![1](https://user-images.githubusercontent.com/44727218/202766357-a6accf84-bb8f-41d1-b5e7-ad0b55de5b0d.PNG)
 
+***Interface communication***
+
+![1](https://user-images.githubusercontent.com/44727218/202766581-d7de2c77-e782-4960-8126-deabc3cb307c.PNG)
+
+**Typescale**
+
+In Risitas Corp. We use two fonts that depend of the paper they are doing (title or body) and the visibility we want to give it.
+You can use twelve states of range; their have levels since Headlines 1 to XSmall text; usind different fonts, sizes and weights ensure readability and give some hierarchy.
+
+You will find the special font under the name Domaine display. (We only choose the icons just for being cute).
+
+![1](https://user-images.githubusercontent.com/44727218/202766840-2bfb1cd8-ad99-4112-b891-03f8b91652e2.PNG)
+
+
+![1](https://user-images.githubusercontent.com/44727218/202766933-10c95a39-3fbd-4b8b-84fa-5d1f6c9efd83.PNG)
+
+**Shapes**
+
+Lines and blobs are an aesthetic factor of vital importance throughout the design process. These are complementes by simple outline illustration that give all the vitality and dynamism to the application.
+
+Small details are important to us. (It is a resource that gives life to everything).
+
+![1](https://user-images.githubusercontent.com/44727218/202767069-51ae73b3-9de7-4a5c-9462-81a4d65212de.PNG)
 
 # The experience (step by step)
 
@@ -180,7 +204,6 @@ STEP ONE: CADENCE SENSOR
 * Cadence sensor
 * UDP Client Architecture Segment
 * Programs to use
-
 
 2. BLUETOOTH LOW ENERGY PROTOCOL
 * BLE Overview 
