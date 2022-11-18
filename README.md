@@ -19,6 +19,10 @@ The process of creating the project was based on 2 sections.
 
 The technological dedicated to all those circuits, and devices necessary for the functionality of the project.
 
+Our project was based on the idea of getting to the u by bicycle, in the longest possible time, "it's a world upside down", where the later you arrive the better, so our runner will have to arrive late to the u and your saboteur will create different actions that will make him move faster and faster.
+
+There will always be a master, someone who tells the actions that the saboteur must do, to obtain these benefits.
+
 **The design**
 
 comprising the creation process and user experience.
@@ -28,17 +32,39 @@ comprising the creation process and user experience.
 
 The idea of the project was to create a race against the clock of a cyclist; which will be constantly sabotaged by his friends and by the altered physics of the game itself.
 
-![1](https://user-images.githubusercontent.com/44727218/202759288-a95881af-cf34-4338-857f-e5f6c438f523.PNG)
-![2](https://user-images.githubusercontent.com/44727218/202759365-2e2a3bcf-3778-452c-aebc-f10289e03397.PNG)
-![3](https://user-images.githubusercontent.com/44727218/202759437-f1a5a9e7-8fd9-497a-85c1-8ba863b0e9a5.PNG)
-
-
 For the elaboration of the project we decided to work under a group of UDP clients who would join the project.
 
+![1](https://user-images.githubusercontent.com/44727218/202759847-d9b0413a-0728-416e-8232-5dfb7289602a.PNG)
 
-Our project was based on the idea of getting to the u by bicycle, in the longest possible time, "it's a world upside down", where the later you arrive the better, so our runner will have to arrive late to the u and your saboteur will create different actions that will make him move faster and faster.
+1° We would have a cadence sensor that would give us the RPM so we would measure the speed of the rider.
 
-There will always be a master, someone who tells the actions that the saboteur must do, to obtain these benefits.
+![3](https://user-images.githubusercontent.com/44727218/202759924-1cc1f4c6-4469-42a5-a98e-9c5b293b62b9.PNG)
+
+3° A saboteur device that will give tasks to the user who fulfills this role.
+
+4° A Master's device that will send the tasks to the saboteur and the advantages or disadvantages to the cyclist.
+
+We build the race and connected all the devices to do it.
+
+First place we connect two mobile applications with Unity, to launch the different actions between "Saboteur", "Bicycle rider" and "Master".
+
+Sensors was our second step, we had a candence sensor who was conected throw Bluethoot to an secondary app runing on the main device (computer runing Unity with the bicycling rider app) who recollect the cadence data and resend to Unity throw UDP communication. And last we used a "M5 stack device" to get the data from his gyroscope, after we sended the "bicycle direction" througth UDP
+protocole to Unity.
+
+Last but no least, we integrate VR using Tilia to view the world and inmerse our users to thier new momentaneus reality, without concerns
+
+![4](https://user-images.githubusercontent.com/44727218/202760484-6b2a62ae-679d-4202-9321-aea4d690d7a8.PNG)
+
+**What is next?**
+
+Our next step is take our experience to a
+multiplayer platform to allow more students on healthy competition furthering the interaction between them minimizing their stress and making the students life happier.
+
+![1](https://user-images.githubusercontent.com/44727218/202761635-bd45c648-e117-4a87-a68e-7edccafb0b6f.PNG)
+
+
+
+
 
 In general, our experience is made for all kinds of people, causing them to be forced to exercise and move.
 ![1](https://user-images.githubusercontent.com/44727218/202735594-0d9bc2dc-8088-44f7-8642-5f8af55377ff.PNG)
@@ -46,12 +72,7 @@ In general, our experience is made for all kinds of people, causing them to be f
 ![3](https://user-images.githubusercontent.com/44727218/202735823-1f1a84ec-ba09-4359-b481-4b315efb53dd.PNG)
 
 ## UX Design
-![image](https://user-images.githubusercontent.com/44727218/202745023-9da21f85-ce33-45ea-9ef9-427587803298.png)
-![image](https://user-images.githubusercontent.com/44727218/202745061-5d6343f6-659a-4a1f-b66b-d8691be0fbea.png)
-![image](https://user-images.githubusercontent.com/44727218/202745084-51d2ed91-d290-4b40-91de-e6d72ff19096.png)
-![image](https://user-images.githubusercontent.com/44727218/202745126-2b403124-39fa-448e-9106-058eeb23dff6.png)
-![image](https://user-images.githubusercontent.com/44727218/202745165-bc0cb65c-32be-4daf-95a7-455c7d08f98b.png)
-![image](https://user-images.githubusercontent.com/44727218/202745193-3e6d09a7-f608-4561-8829-b30938c3354b.png)
+
 
 ## UI Design
 ![image](https://user-images.githubusercontent.com/44727218/202745226-36607916-c142-403f-a36d-057468e3406d.png)
