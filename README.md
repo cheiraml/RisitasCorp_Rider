@@ -839,8 +839,14 @@ https://user-images.githubusercontent.com/44727218/202745653-cbffbd2b-42ce-4808-
 
 https://user-images.githubusercontent.com/44727218/202745735-9b77c1fa-7aa5-4abf-8db1-d656b7ad918e.mp4
 
+https://user-images.githubusercontent.com/44727218/202746750-5189eaad-f6c7-4fcb-ad46-d88eb26b15e4.mp4
+
 
 [Risitas Corp. APP Repository](https://github.com/IsabelaGAngel/RisitasCorp_App)
 
 ![Logo](https://github.com/IsabelaGAngel/RisitasCorp_Rider/blob/main/ImagenesReferencia/RisitasLogo.png)
+
+
+
+
 
