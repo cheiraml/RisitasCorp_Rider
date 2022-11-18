@@ -715,9 +715,13 @@ To verify the connections between the applications we will use the scriptCommuni
 
 ![] (https://user-images.githubusercontent.com/44727218/202724318-024c4dca-e8d9-4170-8ce6-546afc3e0398.mp4)
 
+
+
+
+https://user-images.githubusercontent.com/44727218/202724792-61cc56b9-2a3d-4ba2-aa58-2aae03b457ee.mp4
+
+
 [Risitas Corp. APP Repository](https://github.com/IsabelaGAngel/RisitasCorp_App)
-
-
 
 
 
