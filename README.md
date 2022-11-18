@@ -30,7 +30,7 @@ comprising the creation process and user experience.
 
 **Tech** 
 
-***Research
+***Research***
 
 The idea of the project was to create a race against the clock of a cyclist; which will be constantly sabotaged by his friends and by the altered physics of the game itself.
 
@@ -137,7 +137,7 @@ We know this sound crazy, but this make the design so much aesthetic.
 
 ![1](https://user-images.githubusercontent.com/44727218/202764802-84927c07-54ee-4363-b96e-f55f94a1719b.PNG)
 
-***Use the 8 point grid system. ***
+***Use the 8 point grid system.***
 
 ![1](https://user-images.githubusercontent.com/44727218/202764957-5b853867-eb63-4c12-b75f-54fbdabaa4b7.PNG)
 
