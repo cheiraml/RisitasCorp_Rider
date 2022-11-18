@@ -23,6 +23,13 @@ The technological dedicated to all those circuits, and devices necessary for the
 **The design**
 
 comprising the creation process and user experience.
+**Tech** 
+
+***Research***
+
+The idea of the project was to create a race against the clock of a cyclist; which will be constantly sabotaged by his friends and by the altered physics of the game itself.
+
+For the elaboration of the project we decided to work under a group of UDP clients who would join the project.
 
 Our project was based on the idea of getting to the u by bicycle, in the longest possible time, "it's a world upside down", where the later you arrive the better, so our runner will have to arrive late to the u and your saboteur will create different actions that will make him move faster and faster.
 
